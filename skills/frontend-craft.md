@@ -22,7 +22,6 @@ Non-negotiable. Violations are wrong, full stop.
 - Apply the namespace prefix to layout (`{ns}l-name`) and module (`{ns}name`) classes only
 - State classes: `is-active`, `is-hidden`, `is-loading` — no namespace
 - For modifiers, use separate classes starting with `mod-` (`mod-large`, `mod-dark`, `mod-compact`) — no namespace, no BEM-style concatenation
-- Modifier classes: `mod-large`, `mod-dark`, `mod-compact` — no namespace
 - `id` is for JS targeting only, never CSS
 - `class` is for styling only, never `querySelector` (use `data-*` for JS hooks instead)
 - Semantic HTML: `<button>` for actions, `<a>` for navigation, `<header>`/`<nav>`/`<main>`/`<section>`/`<footer>` for structure, headings in order
