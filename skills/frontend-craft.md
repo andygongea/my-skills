@@ -21,7 +21,7 @@ Non-negotiable. Violations are wrong, full stop.
 - Use SMACSS naming. **Never BEM** (no `__element` or `--modifier` syntax in new code)
 - Apply the namespace prefix to layout (`{ns}l-name`) and module (`{ns}name`) classes only
 - State classes: `is-active`, `is-hidden`, `is-loading` — no namespace
-- For modifiers, use separate classes starting with `mod-` (`mod-large`, `mod-dark`, `mod-compact`) — no namespace, no BEM-style concatenation
+- Modifier classes: `mod-large`, `mod-dark`, `mod-compact` — no namespace
 - `id` is for JS targeting only, never CSS
 - `class` is for styling only, never `querySelector` (use `data-*` for JS hooks instead)
 - Semantic HTML: `<button>` for actions, `<a>` for navigation, `<header>`/`<nav>`/`<main>`/`<section>`/`<footer>` for structure, headings in order
@@ -75,7 +75,9 @@ Non-negotiable. Violations are wrong, full stop.
 **Full process** — for new components, new screens, redesigns, anything labelled "design", "build", "create from scratch":
 
 ### 1. Gather prerequisites
-Ask only for what's missing from context:
+Before asking the user, check `CLAUDE.md` and existing project files for conventions already in place. If a namespace prefix, font stack, primary colour, design system, or test framework is set, use it — don't ask again. The defaults below apply only when nothing exists in the project.
+
+Ask only for what's genuinely missing:
 - CSS namespace prefix (e.g. `ag-`)
 - Body and monospace fonts (defaults if none)
 - Primary/accent colour (chosen if none)
